@@ -8,15 +8,17 @@ import Pages.HomePage;
 
 public class TestContext {
 
-	public WebDriver driver;
-	public ObjectManager ObjectManager ;
-	public HomePage HomePage;
+	public WebDriver drivers;
+	public ObjectManager ObjectManager;
+	public gebericfunctions gebericfunctions;
+	public BaseClass u;
 
 	public TestContext() throws IOException {
+		u=new BaseClass();
+		this.drivers=u.WebdriverSetup();
+		ObjectManager = new ObjectManager(drivers);
+		gebericfunctions = new gebericfunctions(drivers);
 
-		BaseClass a = new BaseClass();
-		ObjectManager  = new ObjectManager(a.WebdriverSetup());
-		
 	}
 
 }

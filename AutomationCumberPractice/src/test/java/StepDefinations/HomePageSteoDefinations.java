@@ -10,10 +10,12 @@ import io.cucumber.java.en.When;
 public class HomePageSteoDefinations {
 
 	public TestContext a;
+	public HomePage d;
 
 	public HomePageSteoDefinations(TestContext a) {
 
 		this.a = a;
+		 d = a.ObjectManager.home();
 
 	}
 
@@ -28,7 +30,7 @@ public class HomePageSteoDefinations {
 	public void on_the_fotter_it_should_have_three_arivals_only() {
 
 		try {
-			HomePage d = a.ObjectManager.home();
+
 			int x = d.slidersvalue();
 			Assert.assertEquals(3, x);
 
@@ -41,12 +43,38 @@ public class HomePageSteoDefinations {
 		}
 
 	}
+
 	
 	
-	@When("the user click on all {int} sliders it should navigate")
-	public void the_user_click_on_all_sliders_it_should_navigate(Integer int1) {
+	@Given("the user is on landing page")
+	public void the_user_is_on_landing_page() {
+	    
+		System.out.println("The 2nd test is now running at this time");
+	    
+	}
+	@When("check the redirection of the sliders each with build")
+	public void check_the_redirection_of_the_sliders_each_with_build() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		try {
+
+			for (int i = 0; i <= d.laxyloading.size()-1; i++) {
+			   
+				
+				d.laxyloading.get(i).click();
+				a.drivers.navigate().back();
+				
+				a.gebericfunctions.webelementwaitss(d.laxyloading.get(i));
+				
+
+			}
+
+		}
+
+		catch (Exception e) {
+			
+			System.out.println(e);
+
+		}
 	}
 
 }
