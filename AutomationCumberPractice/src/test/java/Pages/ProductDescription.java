@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import Utilities.TestContext;
 
@@ -14,19 +15,32 @@ public class ProductDescription {
 	public ProductDescription(WebDriver driver) {
 
 		this.driversp = driver;
+		PageFactory.initElements(driversp, this);
 	}
 
+	@FindBy(xpath = "//img[@alt='Selenium Ruby']")
+	public WebElement seleniumruby;
+
 	@FindBy(xpath = "//li[@class='description_tab active']/a")
-	WebElement discription;
+	public WebElement discription;
 
 	@FindBy(xpath = "//div[@id='tab-description']")
-	WebElement product_discrip;
+	public WebElement product_discrip;
 
-	@FindBy(xpath = "//li[@class='reviews_tab active']/a")
-	WebElement reveiws;
+	@FindBy(xpath = "//a[normalize-space()='Reviews (0)']")
+	public WebElement reveiws;
 
 	@FindBy(xpath = "//textarea[@id='comment']")
-	WebElement comment;
+	public WebElement comment;
+
+	@FindBy(xpath = "//button[@type='submit']")
+	public WebElement addtobasket;
+
+	public void seleniumruby() {
+
+		seleniumruby.click();
+
+	}
 
 	public void discription() {
 
@@ -47,8 +61,14 @@ public class ProductDescription {
 	}
 
 	public boolean mesme() {
-		
+
 		return comment.isDisplayed();
+
+	}
+
+	public void addtobasket() {
+		
+		addtobasket.click();
 
 	}
 

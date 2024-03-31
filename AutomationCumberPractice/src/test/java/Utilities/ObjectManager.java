@@ -3,6 +3,8 @@ package Utilities;
 import org.openqa.selenium.WebDriver;
 
 import Pages.HomePage;
+import Pages.MyAccount;
+import Pages.ProductDescription;
 
 public class ObjectManager {
 
@@ -15,11 +17,19 @@ public class ObjectManager {
 	}
 
 	public HomePage home() {
-		
+
 		return new HomePage(driver);
-		
-		
-		
+
+	}
+
+	public ProductDescription productdis() {
+
+		return new ProductDescription(driver);
+	}
+
+	public MyAccount product1() {
+		return new MyAccount(driver);
+
 	}
 
 }
