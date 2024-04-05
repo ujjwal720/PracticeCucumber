@@ -15,7 +15,7 @@ public class BaseClass {
 	public WebDriver WebdriverSetup() throws IOException {
 
 		File a = new File(
-				"C:\\Users\\DELL\\git\\PracticeCucumber\\AutomationCumberPractice\\src\\test\\java\\Utilities\\configuration.Properties");
+				"C:\\Users\\UjjwalShrivastava\\git\\PracticeCucumber\\AutomationCumberPractice\\src\\test\\java\\Utilities\\configuration.Properties");
 		FileInputStream b = new FileInputStream(a);
 		Properties props = new Properties();
 		props.load(b);
