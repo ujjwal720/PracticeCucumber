@@ -67,6 +67,8 @@ public class HomePageSteoDefinations {
 				
 
 			}
+			
+			Assert.assertEquals("tom", "tommy");
 
 		}
 

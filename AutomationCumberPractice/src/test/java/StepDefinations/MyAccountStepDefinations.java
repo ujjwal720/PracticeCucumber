@@ -36,6 +36,8 @@ public class MyAccountStepDefinations {
 	@DataProvider(name="testdata")
 	@When("the user enter the email and password")
 	public void the_user_enter_the_email_and_password(String email,String password) {
+		
+		
 
 	}
 
@@ -48,7 +50,24 @@ public class MyAccountStepDefinations {
 	public void user_should_click_on_signout() {
 
 	}
+	
+	
+	
+	@When("^the user enters (.*) and (.*) in the login area$")
+	public void whenTheUserEntersCredentialsInTheLoginArea(String username, String password) {
+		MyAcc.MyAccountbutton();
+		MyAcc.email(username);
+	    MyAcc.pass(password);
+		
+	}
+	
 
+    @Then("the user should be redirected to the login page")
+    public void thenTheUserShouldBeRedirectedToTheLoginPage() {
+      
+    }
+    
+    
 	@DataProvider
 	public Object[][] testdata() throws IOException {
 

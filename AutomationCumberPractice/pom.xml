@@ -62,6 +62,22 @@
   </dependency>
 
 
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber5-adapter -->
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber5-adapter</artifactId>
+    <version>2.17.0</version>
+</dependency>
+
+
+
 
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->

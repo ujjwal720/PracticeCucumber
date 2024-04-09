@@ -20,6 +20,7 @@ public class Listen implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         // Your implementation here
+    	System.out.println("the following test i am going to fail in cucmber");
     }
 
     @Override
@@ -34,8 +35,10 @@ public class Listen implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        // Your implementation here
+    	
     }
+    
+        
 
     @Override
     public void onFinish(ITestContext context) {

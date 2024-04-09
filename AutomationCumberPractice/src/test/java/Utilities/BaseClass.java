@@ -21,7 +21,7 @@ public class BaseClass {
 		props.load(b);
 
 		if (driver == null) {
-
+         //   System.setProperty("webdriver.chrome.driver", "C:\\chrome-win64\\chrome.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(props.getProperty("url"));
