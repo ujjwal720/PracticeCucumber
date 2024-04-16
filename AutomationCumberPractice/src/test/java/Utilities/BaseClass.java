@@ -12,6 +12,7 @@ public class BaseClass {
 
 	public WebDriver driver;
 
+	
 	public WebDriver WebdriverSetup() throws IOException {
 
 		File a = new File(

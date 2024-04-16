@@ -48,7 +48,7 @@ public class hooks {
 			File b = new File("C:\\Users\\UjjwalShrivastava\\git\\PracticeCucumber\\AutomationCumberPractice"
 					+ a.getTime() + ".png");
 			TakesScreenshot screenshot = ((TakesScreenshot)driver);
-			File source = screenshot.getScreenshotAs(OutputType.FILE);
+			File source = screenshot.getScreenshotAs(OutputType.FILE);S
 			FileUtils.copyFile(source, b);
 
 		}
@@ -67,7 +67,9 @@ public class hooks {
 	@AfterStep
 	public void aftersexcution(Scenario scenario) throws IOException {
 		
-		File screenshotFile = ((TakesScreenshot)context.drivers).getScreenshotAs(OutputType.FILE);
+		System.out.println("lets excute the first one");
+		
+	File screenshotFile = ((TakesScreenshot)context.drivers).getScreenshotAs(OutputType.FILE);
 		
 		if(scenario.isFailed()==true) {
 

@@ -13,14 +13,19 @@ public class TestContext {
 	public ObjectManager ObjectManager;
 	public gebericfunctions gebericfunctions;
 	public BaseClass u;
-	public Pages.ProductDescription ProductDescription;
+	//public Pages.ProductDescription ProductDescription;
 	
 
 	public TestContext() throws IOException {
+	
+		System.out.println("Test context is running at first");
 		u=new BaseClass();
 		this.drivers=u.WebdriverSetup();
 		ObjectManager = new ObjectManager(drivers);
 		gebericfunctions = new gebericfunctions(drivers);
+		
+		
+		
 		
 		
 

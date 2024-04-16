@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import Pages.HomePage;
 import Pages.MyAccount;
 import Pages.ProductDescription;
+import Pages.ShopPages;
 
 public class ObjectManager {
 
@@ -30,6 +31,20 @@ public class ObjectManager {
 	public MyAccount product1() {
 		return new MyAccount(driver);
 
+		
+		
 	}
+	
+	
+	public ShopPages sho1() {
+		
+		return new ShopPages(driver);
+		
+		
+	}
+
+
+	
+	
 
 }

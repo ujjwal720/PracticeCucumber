@@ -10,3 +10,4 @@ Scenario: To Test the redirection of the sliders is it possible or not
 
 Given the user is on landing page
 When check the redirection of the sliders each with build
+
