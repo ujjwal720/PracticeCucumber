@@ -67,7 +67,7 @@ public class hooks {
 	@AfterStep
 	public void aftersexcution(Scenario scenario) throws IOException {
 		
-		System.out.println("lets excute the first one");
+		
 		
 	File screenshotFile = ((TakesScreenshot)context.drivers).getScreenshotAs(OutputType.FILE);
 		

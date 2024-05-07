@@ -26,7 +26,7 @@ public class MyAccountStepDefinations {
 		this.TestContext = a;
 		MyAcc = TestContext.ObjectManager.product1();
 	}
-
+    
 	@Given("the user is in Acccount Page")
 	public void the_user_is_in_acccount_page() {
 
